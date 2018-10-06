@@ -32,6 +32,48 @@ git clone https://github.com/rg3915/django-datatables-experiment.git
 
 A partir dai assista o video no [YouTube]().
 
+### Anotações mostradas no video:
+
+#### Copiando arquivos
+
+```
+cp -r django-datatables-experiment/contrib/ .
+cp -r django-datatables-experiment/myproject/ .
+cp django-datatables-experiment/manage.py .
+cp django-datatables-experiment/requirements.txt .
+cp django-datatables-experiment/.gitignore .
+rm -rf django-datatables-experiment/
+```
+
+#### Iniciando o projeto
+
+```
+python -V
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -r requirements.txt
+python contrib/env_gen.py
+python manage.py migrate
+python manage.py createsuperuser --username='admin'
+```
+
+#### Resetando a senha
+
+```python
+python manage.py shell_plus
+user = User.objects.get(username='admin')
+user.set_password('d')
+user.save()
+exit()
+```
+
+#### Importando os dados
+
+```
+python import_data.py
+```
+
 
 ### Referências
 

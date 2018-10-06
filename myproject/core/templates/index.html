@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h2>Exemplo do uso de <a href="https://datatables.net/" target="_blank">DataTables</a></h2>
+    <p>Exemplo do uso de DataTables com Django.</p>
+    <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Contatos</h2>
+      <table id="myTable1" class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Gênero</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in person_list %}
+            <tr>
+              <td>{{ person.name }}</td>
+              <td>{{ person.email }}</td>
+              <td>{{ person.phone }}</td>
+              <td>{{ person.get_gender_display }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h2>Contatos via JSON</h2>
+      <table id="myTable2" class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Gênero</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+
+</div> <!-- /container -->
+
+{% endblock content %}
+
+{% block js %}
+
+<script src="{% static 'js/data.js' %}"></script>
+
+{% endblock js %}
