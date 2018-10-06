@@ -1,4 +1,5 @@
 from django.db import models
+from localflavor.br.br_states import STATE_CHOICES
 
 
 class Person(models.Model):
@@ -33,3 +34,33 @@ class Person(models.Model):
             'phone': self.phone,
             'gender': self.get_gender_display(),
         }
+
+
+class City(models.Model):
+    name = models.CharField('cidade', max_length=100)
+    uf = models.CharField('UF', max_length=2, choices=STATE_CHOICES)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'cidade'
+        verbose_name_plural = 'cidades'
+
+
+class District(models.Model):
+    name = models.CharField('distrito', max_length=100)
+    city = models.ForeignKey(
+        'City',
+        verbose_name='cidade',
+        on_delete=models.CASCADE,
+    )
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'distrito'
+        verbose_name_plural = 'distritos'
