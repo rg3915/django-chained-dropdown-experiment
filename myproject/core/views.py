@@ -22,13 +22,13 @@ def dashboard(request):
     context = {}
     cities = City.objects.all()
     districts = District.objects.all()
-    context['states'] = STATE_CHOICES
-    # context['states'] = (
-    #     ('MG', 'Minas Gerais'),
-    #     ('PR', 'Paraná'),
-    #     ('RJ', 'Rio de Janeiro'),
-    #     ('SP', 'São Paulo'),
-    # )
+    # context['states'] = STATE_CHOICES
+    context['states'] = (
+        ('MG', 'Minas Gerais'),
+        ('PR', 'Paraná'),
+        ('RJ', 'Rio de Janeiro'),
+        ('SP', 'São Paulo'),
+    )
     context['cities'] = cities
     context['districts'] = districts
     return render(request, 'dashboard.html', context)
