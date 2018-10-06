@@ -61,6 +61,9 @@
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>UF</th>
           </tr>
         </thead>
         <tbody>
@@ -69,6 +72,9 @@
               <td>{{ person.name }}</td>
               <td>{{ person.email }}</td>
               <td>{{ person.phone }}</td>
+              <td>{{ person.district }}</td>
+              <td>{{ person.district.city }}</td>
+              <td>{{ person.district.city.uf }}</td>
             </tr>
           {% endfor %}
         </tbody>

@@ -52,7 +52,8 @@ def dashboard(request):
     # Filtro
     q = request.GET.get('district')
     if q:
-        persons = Person.objects.filter(district=q)
+        q = q.replace('.', '')
+        persons = Person.objects.filter(district=str(q))
         context['persons'] = persons
     return render(request, 'dashboard.html', context)
 
