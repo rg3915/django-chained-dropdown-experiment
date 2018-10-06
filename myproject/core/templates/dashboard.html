@@ -29,6 +29,8 @@
               <td>
                 <a href="" 
                    class="state" 
+                   data-url="{% url 'core:cities_ajax' %}?uf={{ state.0 }}" 
+                   data-uf="{{ state.0 }}"
                    >{{ state.1 }}</a>
               </td>
               <td>{{ state.0 }}</td>
@@ -38,7 +40,7 @@
       </table>
     </div>
     <div class="col">
-      <table class="table">
+      <!-- <table class="table">
         <thead>
           <tr>
             <th>Cidade</th>
@@ -53,10 +55,14 @@
             </tr>
           {% endfor %}
         </tbody>
-      </table>
+      </table> -->
+      <div class="cities">
+        <h5>Cidades</h5>
+        <div id="id_cities"></div>
+      </div>
     </div>
     <div class="col">
-      <table class="table">
+      <!-- <table class="table">
         <thead>
           <tr>
             <th>Bairro</th>
@@ -73,7 +79,11 @@
             </tr>
           {% endfor %}
         </tbody>
-      </table>
+      </table> -->
+      <div class="districts">
+        <h5>Bairros</h5>
+        <div id="id_districts"></div>
+      </div>
     </div>
     </div>
   </div>
@@ -84,3 +94,43 @@
 
 {% endblock content %}
 
+{% block js %}
+
+  <script>
+    $('.state').on('click', function(event) {
+      let url = $(this).data('url');
+      let uf = $(this).data('uf');
+      console.log(url);
+
+      $.ajax({
+        url: url,
+        data: {
+          uf: uf
+        },
+        success: function(response) {
+          $('#id_cities').html(response);
+          $('#id_districts').html('');
+        }
+      })
+      event.preventDefault();
+    });
+
+    $(document).on('click', '.city', function(event) {
+      let url = $(this).data('url');
+      let uf = $(this).data('uf');
+      console.log(url);
+
+      $.ajax({
+        url: url,
+        data: {
+          uf: uf
+        },
+        success: function(response) {
+          $('#id_districts').html(response);
+        }
+      })
+      event.preventDefault();
+    });
+  </script>
+
+{% endblock js %}
