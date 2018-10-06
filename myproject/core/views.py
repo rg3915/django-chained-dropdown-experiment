@@ -35,19 +35,8 @@ def filter_list(request):
     return render(request, 'filter_list.html', context)
 
 
-def dashboard(request):
+def filter_dropdown(request):
     context = {}
-    # cities = City.objects.all()
-    # districts = District.objects.all()
-    # context['states'] = STATE_CHOICES
-    # context['states'] = (
-    #     ('MG', 'Minas Gerais'),
-    #     ('PR', 'Paraná'),
-    #     ('RJ', 'Rio de Janeiro'),
-    #     ('SP', 'São Paulo'),
-    # )
-    # context['cities'] = cities
-    # context['districts'] = districts
     context['form'] = StateForm
     # Filtro
     q = request.GET.get('district')
@@ -55,7 +44,7 @@ def dashboard(request):
         q = q.replace('.', '')
         persons = Person.objects.filter(district=str(q))
         context['persons'] = persons
-    return render(request, 'dashboard.html', context)
+    return render(request, 'filter_dropdown.html', context)
 
 
 def cities_ajax(request):
