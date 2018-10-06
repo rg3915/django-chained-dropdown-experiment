@@ -71,7 +71,21 @@ exit()
 #### Importando os dados
 
 ```
+mkdir fix
+cd fix
+wget 
+wget 
 python import_data.py
+```
+
+#### Lendo os dados
+
+```python
+python manage.py shell_plus
+City.objects.all()
+City.objects.all().count()
+Distric.objects.last()
+Distric.objects.all().count()
 ```
 
 

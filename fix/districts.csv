@@ -1,0 +1,378 @@
+city,name
+Belo Horizonte,Cristo Redentor
+Belo Horizonte,Diamante
+Belo Horizonte,Conjunto Esperança
+Belo Horizonte,Flávio Marques Lisboa
+Belo Horizonte,Conjunto Flávio de Oliveira
+Belo Horizonte,Vila Formosa
+Belo Horizonte,Independência
+Belo Horizonte,Itaipu
+Belo Horizonte,Vila Jardim do Vale
+Belo Horizonte,Jatobá
+Belo Horizonte,Jatobá IV
+Belo Horizonte,Lindéia
+Contagem,Água Branca
+Contagem,Alvorada
+Contagem,Arvoredo
+Contagem,Amazonas
+Contagem,Arcádia
+Contagem,Bandeirantes
+Contagem,Beija-flor
+Contagem,Bernardo Monteiro
+Contagem,Bom Jesus
+Contagem,Braúnas
+Contagem,Buganville
+Contagem,Cabral
+Contagem,Caiapós
+Contagem,Camilo Alves
+Contagem,Campina Verde
+Contagem,Campo Alto
+Contagem,Canadá
+Contagem,Cândida Ferreira
+Contagem,Carajás
+Contagem,Chácara
+Contagem,Chácara Boa Vista
+Contagem,Chácaras Cotia
+Contagem,Chácaras Del Rey
+Contagem,Chácaras Novo Horizonte
+Contagem,Chácara São Geraldo
+Contagem,Chácaras Califórnia
+Contagem,Cidade Industrial
+Contagem,Cidade Jardim
+Contagem,Cinco
+Juiz De Fora,Alto dos Passos
+Juiz De Fora,Boa Vista
+Juiz De Fora,Bom Pastor
+Juiz De Fora,Centro
+Juiz De Fora,Costa Carvalho
+Juiz De Fora,Dom Bosco
+Juiz De Fora,Fábrica
+Juiz De Fora,Granbery
+Juiz De Fora,Jardim Glória
+Juiz De Fora,Jardim Paineiras
+Juiz De Fora,Jardim Santa Helena
+Juiz De Fora,Morro da Glória
+Juiz De Fora,Mundo Novo
+Juiz De Fora,Poço Rico
+Juiz De Fora,Santa Catarina
+Juiz De Fora,Santa Cecília
+Juiz De Fora,São Mateus
+Juiz De Fora,Vale do Ipê
+Juiz De Fora,Vila Ozanan
+Juiz De Fora,Vila Ideal
+Montes Claros,Antônio Pimenta
+Montes Claros,Bela Paisagem
+Montes Claros,Camilo Prates
+Montes Claros,Carmelo
+Montes Claros,Chiquinho Guimaraes
+Montes Claros,Cidade Cristo Rei
+Montes Claros,Cidade Industrial
+Montes Claros,Cintra
+Montes Claros,Cj Joaquim Costa
+Montes Claros,Delfino Magalhaes
+Montes Claros,Distrito d Aparecid
+Montes Claros,Eldorado
+Montes Claros,Ibituruna
+Montes Claros,Independência
+Montes Claros,Jaragua II
+Montes Claros,José Carlos d Lima
+Montes Claros,José Correa Machado
+Montes Claros,Major Prates
+Montes Claros,Maracana
+Montes Claros,Monte Carmelo II
+Montes Claros,Morrinhos
+Montes Claros,Nossa Senhora d Lou
+Montes Claros,Planalto
+Montes Claros,Renascenca
+Montes Claros,Santa Lucia
+Montes Claros,Santa Rafaela
+Montes Claros,Santa Rosa d Lima
+Montes Claros,Santo Antônio I
+Montes Claros,Santo Antônio II
+Montes Claros,Santo Inacio
+Montes Claros,Santos Reis
+Montes Claros,São Geraldo
+Montes Claros,Vera Cruz
+Montes Claros,Vilaa Analia
+Montes Claros,Vilaa Atlantida
+Montes Claros,Vilaa Campos
+Montes Claros,Vilaa Mauriceia
+Montes Claros,Vilaa Nova d Minas
+Montes Claros,Vilaa Telma
+Montes Claros,Vilaage do Lago II
+Montes Claros,Vilaage do Lago
+Montes Claros,Vilalage do Lago
+Uberlândia,Centro
+Uberlândia,Fundinho
+Uberlândia,Nossa Senhora Aparecida
+Uberlândia,Martins
+Uberlândia,Osvaldo Rezende
+Uberlândia,Bom Jesus
+Uberlândia,Brasil
+Uberlândia,Cazeca
+Uberlândia,Lídice
+Uberlândia,Daniel Fonseca
+Uberlândia,Tabajaras
+Campinas,Bosque
+Campinas,Botafogo
+Campinas,Cambuí
+Campinas,Centro
+Campinas,Guanabara
+Campinas,Vila Itapura
+Campinas,Vila Industrial
+Guarulhos,Água Azul
+Guarulhos,Bananal
+Guarulhos,Bela Vista
+Guarulhos,Bonsucesso
+Guarulhos,Continental
+Guarulhos,Capelinha
+Guarulhos,Cocaia
+Guarulhos,Cumbica
+Osasco,Ayrosa
+Osasco,Bandeiras
+Osasco,Baronesa
+Osasco,Bonança
+Osasco,Cidade das Flores
+Osasco,Cipava
+Osasco,Conceição
+Osasco,Mutinga
+Osasco,Piratininga
+Osasco,Jardim Roberto
+São Bernardo Do Campo,Alvarenga
+São Bernardo Do Campo,Alves Dias
+São Bernardo Do Campo,Anchieta
+São Bernardo Do Campo,Assunção
+São Bernardo Do Campo,Baeta Neves
+São Bernardo Do Campo,Bairro dos Casa
+São Bernardo Do Campo,Batistini
+São Bernardo Do Campo,Botujuru
+São Bernardo Do Campo,Centro
+São Bernardo Do Campo,Cooperativa
+São Bernardo Do Campo,Demarchi
+São Bernardo Do Campo,Ferrazópolis
+São Bernardo Do Campo,Independência
+São Bernardo Do Campo,Jordanópolis
+São Bernardo Do Campo,Montanhão
+São Bernardo Do Campo,Nova Petrópolis
+São Bernardo Do Campo,Paulicéia
+São Bernardo Do Campo,Planalto
+São Bernardo Do Campo,Rudge Ramos
+São Bernardo Do Campo,Santa Terezinha
+São Bernardo Do Campo,Taboão
+São Paulo,Centro
+São Paulo,Cerqueira Cesar
+São Paulo,Consolação
+São Paulo,Bela Vista
+São Paulo,Vila Mariana
+São Paulo,Santo Amaro
+São Paulo,Morunbi
+São Paulo,Butantã
+São Paulo,Mooca
+São Paulo,Barra Funda
+São Paulo,Lapa
+São Paulo,Brás
+São Paulo,Liberdade
+São Paulo,Saúde
+São Paulo,São Judas
+São Paulo,Tucuruvi
+Búzios,Portal Da Ferradura
+Búzios,São Jose
+Búzios,Tartaruga
+Búzios,Brava
+Búzios,Cabo Frio
+Niterói,Bairro de Fátima
+Niterói,Boa Viagem
+Niterói,Cachoeiras
+Niterói,Centro
+Niterói,Charitas
+Niterói,Gragoatá
+Niterói,Icaraí
+Niterói,Ingá
+Niterói,Jurujuba
+Niterói,Morro do Estado
+Niterói,Pé Pequeno
+Niterói,Ponta D'areia
+Niterói,Santa Rosa
+Niterói,São Domingos
+Niterói,São Francisco
+Niterói,Viradouro
+Niterói,Vital Brazil 
+Niterói,Baldeador
+Niterói,Barreto
+Niterói,Caramujo
+Niterói,Cubango
+Niterói,Engenhoca
+Niterói,Fonseca
+Niterói,Ilha Da Conceição
+Niterói,Santa Bárbara
+Niterói,Santana
+Niterói,São Lourenço
+Niterói,Tenente Jardim
+Niterói,Viçoso Jardim 
+Niterói,Cafubá
+Niterói,Camboinhas
+Niterói,Engenho do Mato
+Niterói,Itacoatiara
+Niterói,Itaipu
+Niterói,Jacaré
+Niterói,Jardim Imbuí
+Niterói,Maravista
+Niterói,Piratininga
+Niterói,Santo Antônio
+Niterói,Serra Grande 
+Niterói,Badu
+Niterói,Cantagalo
+Niterói,Ititioca
+Niterói,Largo Da Batalha
+Niterói,Maceió
+Niterói,Maria Paula
+Niterói,Matapaca
+Niterói,Sapê
+Niterói,Vila Progresso 
+Niterói,Muriqui
+Niterói,Rio do Ouro
+Niterói,Várzea das Moças
+Paraty,Bairro de Fátima
+Paraty,Barra Grande
+Paraty,Boa Vista
+Paraty,Caboclo
+Paraty,Caborê
+Paraty,Cabral
+Paraty,Campinho Da Independência
+Paraty,Centro
+Paraty,Chácara
+Paraty,Chácara Da Saudade
+Paraty,Colônia
+Paraty,Condado
+Paraty,Coriscão
+Paraty,Corisco
+Petrópolis,Alto Da Serra
+Petrópolis,Araras
+Petrópolis,Bingen
+Petrópolis,Bonsucesso
+Petrópolis,Capela
+Petrópolis,Cascatinha
+Petrópolis,Duchas
+Petrópolis,Fazenda Inglesa
+Petrópolis,Glória
+Petrópolis,Itaipava
+Petrópolis,Itamarati
+Petrópolis,Nogueira
+Petrópolis,Posse
+Petrópolis,Quitandinha
+Petrópolis,Saldanha Marinho
+Petrópolis,Samambaia
+Petrópolis,Taquara
+Rio De Janeiro,Bairro Imperial de São Cristóvão
+Rio De Janeiro,Benfica
+Rio De Janeiro,Caju
+Rio De Janeiro,Catumbi
+Rio De Janeiro,Centro
+Rio De Janeiro,Cidade Nova
+Rio De Janeiro,Estácio
+Rio De Janeiro,Gamboa
+Rio De Janeiro,Mangueira
+Rio De Janeiro,Paquetá
+Rio De Janeiro,Rio Comprido
+Rio De Janeiro,Santa Teresa
+Rio De Janeiro,Santo Cristo
+Rio De Janeiro,Saúde
+Rio De Janeiro,Vasco Da Gama
+Cascavel,Alto Alegre
+Cascavel,Brasília
+Cascavel,Brasmadeira
+Cascavel,Canadá
+Cascavel,Cancelli
+Cascavel,Cascavel Velho
+Cascavel,Cataratas
+Cascavel,Centro
+Cascavel,Coqueiral
+Cascavel,Country
+Cascavel,Esmeralda
+Cascavel,Floresta
+Cascavel,Guarujá
+Cascavel,Interlagos
+Cascavel,Maria Luiza
+Cascavel,Morumbi
+Cascavel,Neva
+Cascavel,Pacaembu
+Cascavel,Parque São Paulo
+Cascavel,Parque Verde
+Cascavel,Periolo
+Cascavel,Pioneiros Catarinenses
+Cascavel,Recanto Tropical
+Cascavel,Região do Lago
+Cascavel,Santa Cruz
+Cascavel,Santa Felicidade
+Cascavel,Santo Onofre
+Cascavel,Santos Dumont
+Cascavel,São Cristóvão
+Cascavel,Universitário
+Curitiba,Bairro Novo
+Curitiba,Boa Vista
+Curitiba,Boqueirão
+Curitiba,Cajuru
+Curitiba,Cidade Industrial de Curitiba (cic)
+Curitiba,Fazendinha-portão
+Curitiba,Matriz
+Curitiba,Pinheirinho
+Curitiba,Santa Felicidade
+Londrina,Centro Histórico
+Londrina,Jardim Higienópolis
+Londrina,Jardim Petrópolis
+Londrina,Jardim Quebec
+Londrina,Vila Brasil
+Londrina,Vila Casoni
+Londrina,Vila Ipiranga
+Londrina,Vila Nova
+Londrina,Vila Recreio
+Londrina,Aeroporto
+Londrina,Cidade Industrial 2
+Londrina,Conjunto Ernani Moura Lima
+Londrina,Gleba Lindoia
+Londrina,HU
+Londrina,Jardim Antares
+Londrina,Jardim Brasília
+Londrina,Jardim Califórnia
+Londrina,Jardim Ideal
+Londrina,Jardim Interlagos
+Londrina,Lon Rita
+Londrina,Parque das Indústrias Leves
+Londrina,Vila Fraternidade
+Londrina,Cidade Industrial 1
+Londrina,Cinco Conjuntos
+Londrina,Conjunto Parigot de Souza
+Londrina,Conjunto Vivi Xavier
+Londrina,Jardim Coliseu
+Londrina,Jardim dos Alpes
+Maringá,Oásis
+Maringá,Olímpico
+Maringá,Ouro Cola Bertioga
+Maringá,Borba Gato
+Maringá,Cidade Monções
+Maringá,Cidade Nova
+Maringá,Dias
+Maringá,Grevíleas Hermann Moraes de Barros
+Maringá,Iguaçu
+Maringá,Jardim Alvorada
+Maringá,Jardim Diamante
+Maringá,Jardim Industrial
+Maringá,Laranjeiras
+Maringá,Parque Avenida
+Maringá,Pinheiros
+Maringá,Recanto dos Magnatas
+São José Dos Pinhais,Alphaville Graciosa
+São José Dos Pinhais,Alto Tarumã
+São José Dos Pinhais,Atuba
+São José Dos Pinhais,Centro
+São José Dos Pinhais,Emiliano Perneta
+São José Dos Pinhais,Estância Pinhais
+São José Dos Pinhais,Jardim Amélia
+São José Dos Pinhais,Jardim Cláudia
+São José Dos Pinhais,Jardim Karla
+São José Dos Pinhais,Maria Antonieta
+São José Dos Pinhais,Parque das Águas
+São José Dos Pinhais,Parque das Nascentes
+São José Dos Pinhais,Pineville
+São José Dos Pinhais,Vargem Grande
+São José Dos Pinhais,Weissópolis
