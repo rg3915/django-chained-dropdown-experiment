@@ -55,3 +55,10 @@ def districts_ajax(request):
     districts = District.objects.filter(city=city)
     context = {'districts': districts}
     return render(request, 'includes/_districts.html', context)
+
+
+def districts_choices_ajax(request):
+    city = request.GET.get('city')
+    districts = District.objects.filter(city=city)
+    context = {'districts': districts}
+    return render(request, 'includes/_districts_choices.html', context)

@@ -14,4 +14,9 @@ urlpatterns = [
         name='cities_choices_ajax'
     ),
     path('districts/ajax/', v.districts_ajax, name='districts_ajax'),
+    path(
+        'districts/choices/ajax/',
+        v.districts_choices_ajax,
+        name='districts_choices_ajax'
+    ),
 ]

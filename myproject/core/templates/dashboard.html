@@ -16,10 +16,12 @@
     <p><i>Segundo choice filtrado a partir do primeiro choice.</i></p>
     <p><a href="https://simpleisbetterthancomplex.com/tutorial/2018/01/29/how-to-implement-dependent-or-chained-dropdown-list-with-django.html" target="_blank">How to Implement Dependent/Chained Dropdown List with Django</a></p>
 
-    <div class="col-sm-9" style="border: dashed 1px grey;">
+    <div style="border: dashed 1px grey;">
       <form id="myForm"
             class="form-inline"
-            data-url="{% url 'core:cities_choices_ajax' %}">
+            data-urlcities="{% url 'core:cities_choices_ajax' %}"
+            data-urldistricts="{% url 'core:districts_choices_ajax' %}"
+            >
         <div class="form-group">
           <label for="stateSelect">Estado</label>
           {% render_field form.state title="Estados" class="form-control" %}
@@ -166,18 +168,36 @@
     });
 
     $('#id_state').change(function() {
-      let urlState = $('#myForm').data('url');
-      let ufId = $(this).val();
-      console.log(ufId);
-      console.log(urlState);
+      let urlCities = $('#myForm').data('urlcities');
+      let ufIdCity = $(this).val();
+      // console.log(ufIdCity);
+      // console.log(urlCities);
 
       $.ajax({
-        url: urlState,
+        url: urlCities,
         data: {
-          uf: ufId
+          uf: ufIdCity
         },
         success: function(response) {
           $('#citySelect').html(response);
+          $('#districtSelect').html('<option value="">---------------------</option>');
+        }
+      })
+    });
+
+    $('#citySelect').change(function() {
+      let urlDistricts = $('#myForm').data('urldistricts');
+      let cityIdDistrict = $(this).val();
+      console.log(urlDistricts);
+      console.log(cityIdDistrict);
+
+      $.ajax({
+        url: urlDistricts,
+        data: {
+          city: cityIdDistrict
+        },
+        success: function(response) {
+          $('#districtSelect').html(response);
         }
       })
     });
