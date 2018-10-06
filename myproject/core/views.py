@@ -19,7 +19,7 @@ def person_json(request):
     return JsonResponse(response)
 
 
-def dashboard(request):
+def filter_list(request):
     context = {}
     cities = City.objects.all()
     districts = District.objects.all()
@@ -32,7 +32,28 @@ def dashboard(request):
     )
     context['cities'] = cities
     context['districts'] = districts
+    return render(request, 'filter_list.html', context)
+
+
+def dashboard(request):
+    context = {}
+    # cities = City.objects.all()
+    # districts = District.objects.all()
+    # context['states'] = STATE_CHOICES
+    # context['states'] = (
+    #     ('MG', 'Minas Gerais'),
+    #     ('PR', 'Paraná'),
+    #     ('RJ', 'Rio de Janeiro'),
+    #     ('SP', 'São Paulo'),
+    # )
+    # context['cities'] = cities
+    # context['districts'] = districts
     context['form'] = StateForm
+    # Filtro
+    q = request.GET.get('district')
+    if q:
+        persons = Person.objects.filter(district=q)
+        context['persons'] = persons
     return render(request, 'dashboard.html', context)
 
 

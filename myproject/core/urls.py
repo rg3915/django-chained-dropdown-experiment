@@ -6,6 +6,7 @@ app_name = 'core'
 urlpatterns = [
     path('', v.index, name='index'),
     path('person/json/', v.person_json, name='person_json'),
+    path('filter_list/', v.filter_list, name='filter_list'),
     path('dashboard/', v.dashboard, name='dashboard'),
     path('cities/ajax/', v.cities_ajax, name='cities_ajax'),
     path(

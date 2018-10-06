@@ -5,7 +5,7 @@ from localflavor.br.br_states import STATE_CHOICES
 class Person(models.Model):
     name = models.CharField('nome', max_length=100)
     email = models.EmailField(null=True, blank=True)
-    phone = models.CharField('telefone', max_length=11, null=True, blank=True)
+    phone = models.CharField('telefone', max_length=15, null=True, blank=True)
     GENDER = (
         ('0', ''),
         ('man', 'homem'),
@@ -16,6 +16,13 @@ class Person(models.Model):
         max_length=5,
         choices=GENDER,
         default='0'
+    )
+    district = models.ForeignKey(
+        'District',
+        verbose_name='bairro',
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
     )
 
     class Meta:

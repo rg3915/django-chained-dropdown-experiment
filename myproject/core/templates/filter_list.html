@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<style>
+  label {
+    padding: 10px;
+  }
+</style>
+
+<div class="jumbotron">
+  <div class="container">
+    <h2>Exemplo de como filtrar várias listas.</h2>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col">
+      <h5>Estados</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Estado</th>
+            <th>UF</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for state in states %}
+            <tr>
+              <td>
+                <a href="" 
+                   class="state" 
+                   data-url="{% url 'core:cities_ajax' %}?uf={{ state.0 }}" 
+                   data-uf="{{ state.0 }}"
+                   >{{ state.1 }}</a>
+              </td>
+              <td>{{ state.0 }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <!-- <table class="table">
+        <thead>
+          <tr>
+            <th>Cidade</th>
+            <th>UF</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for city in cities %}
+            <tr>
+              <td>{{ city.name }}</td>
+              <td>{{ city.uf }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table> -->
+      <div class="cities">
+        <h5>Cidades</h5>
+        <div id="id_cities"></div>
+      </div>
+    </div>
+    <div class="col">
+      <!-- <table class="table">
+        <thead>
+          <tr>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>UF</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for district in districts %}
+            <tr>
+              <td>{{ district.name }}</td>
+              <td>{{ district.city }}</td>
+              <td>{{ district.city.uf }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table> -->
+      <div class="districts">
+        <h5>Bairros</h5>
+        <div id="id_districts"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <hr>
+
+</div> <!-- /container -->
+
+{% endblock content %}
+
+{% block js %}
+
+  <script>
+    $('.state').on('click', function(event) {
+      let url = $(this).data('url');
+      let uf = $(this).data('uf');
+      console.log(url);
+
+      $.ajax({
+        url: url,
+        data: {
+          uf: uf
+        },
+        success: function(response) {
+          $('#id_cities').html(response);
+          $('#id_districts').html('');
+        }
+      })
+      event.preventDefault();
+    });
+
+    $(document).on('click', '.city', function(event) {
+      let url = $(this).data('url');
+      let uf = $(this).data('uf');
+      console.log(url);
+
+      $.ajax({
+        url: url,
+        data: {
+          uf: uf
+        },
+        success: function(response) {
+          $('#id_districts').html(response);
+        }
+      })
+      event.preventDefault();
+    });
+  </script>
+
+{% endblock js %}
