@@ -11,6 +11,8 @@
         <td>
           <a href="" 
              class="city" 
+             data-url="{% url 'core:districts_ajax' %}?city={{ city.pk }}" 
+             data-uf="{{ city.pk }}"
              >{{ city.name }}</a>
         </td>
         <td>{{ city.uf }}</td>
