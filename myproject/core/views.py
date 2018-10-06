@@ -32,3 +32,10 @@ def dashboard(request):
     context['cities'] = cities
     context['districts'] = districts
     return render(request, 'dashboard.html', context)
+
+
+def cities_ajax(request):
+    uf = request.GET.get('uf')
+    cities = City.objects.filter(uf=uf)
+    context = {'cities': cities}
+    return render(request, 'includes/_cities.html', context)
