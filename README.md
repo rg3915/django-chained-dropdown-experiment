@@ -73,8 +73,9 @@ exit()
 ```
 mkdir fix
 cd fix
-wget 
-wget 
+wget https://raw.githubusercontent.com/rg3915/django-chained-dropdown-experiment/master/fix/cities.csv
+wget https://raw.githubusercontent.com/rg3915/django-chained-dropdown-experiment/master/fix/districts.csv
+cd ..
 python import_data.py
 ```
 
