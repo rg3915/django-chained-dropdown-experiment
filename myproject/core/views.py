@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from localflavor.br.br_states import STATE_CHOICES
+from .forms import StateForm
 from .models import Person, City, District
 
 
@@ -31,6 +32,7 @@ def dashboard(request):
     )
     context['cities'] = cities
     context['districts'] = districts
+    context['form'] = StateForm
     return render(request, 'dashboard.html', context)
 
 

@@ -1,13 +1,44 @@
 {% extends "base.html" %}
 {% load static %}
+{% load widget_tweaks %}
 
 {% block content %}
+
+<style>
+  label {
+    padding: 10px;
+  }
+</style>
 
 <div class="jumbotron">
   <div class="container">
     <h2>Exemplo do uso de um filtro com dropdowns dependentes.</h2>
     <p><i>Segundo choice filtrado a partir do primeiro choice.</i></p>
-    <p><a href="https://simpleisbetterthancomplex.com/tutorial/2018/01/29/how-to-implement-dependent-or-chained-dropdown-list-with-django.html">How to Implement Dependent/Chained Dropdown List with Django</a></p>
+    <p><a href="https://simpleisbetterthancomplex.com/tutorial/2018/01/29/how-to-implement-dependent-or-chained-dropdown-list-with-django.html" target="_blank">How to Implement Dependent/Chained Dropdown List with Django</a></p>
+
+    <div class="col-sm-9" style="border: dashed 1px grey;">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="stateSelect">Estado</label>
+          {% render_field form.state title="Estados" class="form-control" %}
+        </div>
+
+        <div class="form-group" style="padding:10px;">
+          <label for="citySelect">Cidade</label>
+          <select class="form-control" id="citySelect">
+            <option>---------------------</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="padding:10px;">
+          <label for="districtSelect">Bairro</label>
+          <select class="form-control" id="districtSelect">
+            <option>---------------------</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
   </div>
 </div>
 
