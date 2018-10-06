@@ -43,6 +43,13 @@ def cities_ajax(request):
     return render(request, 'includes/_cities.html', context)
 
 
+def cities_choices_ajax(request):
+    uf = request.GET.get('uf')
+    cities = City.objects.filter(uf=uf)
+    context = {'cities': cities}
+    return render(request, 'includes/_cities_choices.html', context)
+
+
 def districts_ajax(request):
     city = request.GET.get('city')
     districts = District.objects.filter(city=city)
