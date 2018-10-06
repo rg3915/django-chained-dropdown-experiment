@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>UF</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for district in districts %}
+      <tr>
+        <td>{{ district.name }}</td>
+        <td>{{ district.city }}</td>
+        <td>{{ district.city.uf }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
