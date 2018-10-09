@@ -1,5 +1,5 @@
-from django.shortcuts import render
 from django.http import JsonResponse
+from django.shortcuts import render
 from localflavor.br.br_states import STATE_CHOICES
 from .forms import StateForm
 from .models import Person, City, District
@@ -45,6 +45,20 @@ def filter_dropdown(request):
         persons = Person.objects.filter(district=str(q))
         context['persons'] = persons
     return render(request, 'filter_dropdown.html', context)
+
+
+def filter_dropdown2(request):
+    context = {}
+    state = request.GET.get('state')
+    city = request.GET.get('city')
+    context['form'] = StateForm(state, city)
+    # Filtro
+    q = request.GET.get('district')
+    if q:
+        q = q.replace('.', '')
+        persons = Person.objects.filter(district=str(q))
+        context['persons'] = persons
+    return render(request, 'filter_dropdown2.html', context)
 
 
 def cities_ajax(request):

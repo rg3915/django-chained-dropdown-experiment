@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<style>
+  label {
+    padding: 10px;
+  }
+</style>
+
+<div class="jumbotron">
+  <div class="container">
+    <h2>Exemplo do uso de um filtro com dropdowns dependentes.</h2>
+    <p><i>Segundo choice filtrado a partir do primeiro choice.</i></p>
+
+    <div style="border: dashed 1px grey;">
+      <form id="myForm"
+            method="GET"
+            class="form-inline"
+            data-state="{{ request.GET.state }}"
+            data-city="{{ request.GET.city }}"
+            data-district="{{ request.GET.district }}"
+            >
+        <div class="form-group">
+          <label for="stateSelect">Estado</label>
+          {% render_field form.state title="Estados" class="form-control" %}
+        </div>
+
+        <div class="form-group">
+          <label for="citySelect">Cidade</label>
+          {% render_field form.city title="Cidades" class="form-control" %}
+        </div>
+
+        <div class="form-group">
+          <label for="districtSelect">Bairro</label>
+          {% render_field form.district title="Bairro" class="form-control" %}
+        </div>
+
+        <div class="form-group">
+          <button id="btnSubmit" class="btn btn-success" type="submit">Filtrar</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>UF</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in persons %}
+            <tr>
+              <td>{{ person.name }}</td>
+              <td>{{ person.email }}</td>
+              <td>{{ person.phone }}</td>
+              <td>{{ person.district }}</td>
+              <td>{{ person.district.city }}</td>
+              <td>{{ person.district.city.uf }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+  <hr>
+
+</div> <!-- /container -->
+
+{% endblock content %}
+
+{% block js %}
+  <script>
+    $(document).ready(function() {
+      let state = $('#myForm').data('state')
+      let city = $('#myForm').data('city')
+      let district = $('#myForm').data('district')
+      if (state) {
+        $('#id_state option[value='+state+']').attr('selected', 'selected');
+      }
+      if (city) {
+        $('#id_city option[value='+city+']').attr('selected', 'selected');
+      }
+      if (district) {
+        $('#id_district option[value='+district+']').attr('selected', 'selected');
+      }
+    });
+
+    $('#id_state').on('change', function() {
+      $('#btnSubmit').click();
+    });
+
+    $('#id_city').on('change', function() {
+      $('#btnSubmit').click();
+    });
+  </script>
+{% endblock js %}
