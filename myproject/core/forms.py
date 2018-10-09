@@ -23,7 +23,7 @@ class StateForm(forms.Form):
     class Meta:
         fields = ('state', 'city', 'district')
 
-    def __init__(self, state, city, *args, **kwargs):
+    def __init__(self, state=None, city=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['city'].queryset = City.objects.filter(uf=state)
         if city:
