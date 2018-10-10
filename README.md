@@ -2,7 +2,7 @@
 
 Experiment chained dropdown list with Django.
 
-Video no [YouTube]()
+Video no [YouTube](https://youtu.be/ZOQwyFEFmS4)
 
 ## Como rodar este projeto?
 
@@ -30,7 +30,7 @@ Vamos começar com base no projeto [django-datatables-experiment](https://github
 git clone https://github.com/rg3915/django-datatables-experiment.git
 ```
 
-A partir dai assista o video no [YouTube]().
+A partir dai assista o video no [YouTube](https://youtu.be/ZOQwyFEFmS4).
 
 ### Anotações mostradas no video:
 
